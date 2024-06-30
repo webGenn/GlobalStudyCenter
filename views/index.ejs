@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Global Study Center</title>
+  <!-- -----------------animate div on scroll--------------- -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!-- --------------------css------------------- -->
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <link rel="stylesheet" href="/stylesheets/responsive.css">
+  <!-- --bootstrap--- -->
+  <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <!-- -------------------google fonts----------------------- -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <!-- -----------------------font-awesome------------------- -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+  <!-- ================================NAVIGATION============================ -->
+
+  <div class="home_landing_page">
+    <nav>
+      <h2>Global Study Center</h2>
+      <div class="navbar" id="navbar">
+        <i class="fa-solid fa-xmark close" onclick="hideMenu()"></i>
+        <ul>
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="/register">Curriculum</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <i class="fa-solid fa-bars menu" onclick="showMenu()"></i>
+    </nav>
+    <div class="home_landing_pg_content">
+      <h1>Global Study Center</h1>
+      <p>
+        Global Study Center offers comprehensive computer software coaching, providing expert-led courses in Microsoft
+        Office, Adobe Creative Suite, web development, and programming languages to enhance your technical skills and
+        career opportunities.</p>
+      <center><button>Explore More</button></center>
+    </div>
+  </div>
+
+  <!-- =================================COURSES=============================== -->
+
+  <div id="text_info_web">
+    <h1>Courses</h1>
+    <p>
+      Global Study Center provides courses in Microsoft Office, Adobe Creative Suite, web design, and various
+      programming languages, offering hands-on training and expert guidance to enhance your software skills and career
+      prospects.</p>
+  </div>
+
+  <section class="course_colmn" id="courses">
+
+    <div class="card" data-aos="slide-up">
+      <img src="/images/tjmhl.jpg" class="card-img-top" alt="image">
+      <div class="card-body">
+        <h3>Web Design</h3>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+      </div>
+    </div>
+
+    <div class="card" data-aos="zoom-in">
+      <img src="/images/tjmhl.jpg" class="card-img-top" alt="image">
+      <div class="card-body">
+        <h3>Python</h3>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+      </div>
+    </div>
+
+    <div class="card" data-aos="flip-left">
+      <img src="/images/tjmhl.jpg" class="card-img-top" alt="image">
+      <div class="card-body">
+        <h3>Graphic Design</h3>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+      </div>
+    </div>
+
+    <div class="card" data-aos="zoom-out">
+      <img src="/images/tjmhl.jpg" class="card-img-top" alt="image">
+      <div class="card-body">
+        <h3>ADCA</h3>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+      </div>
+    </div>
+
+    <div class="card" data-aos="flip-up">
+      <img src="/images/tjmhl.jpg" class="card-img-top" alt="image">
+      <div class="card-body">
+        <h3>Photoshop</h3>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- ===================================About=============================== -->
+
+  <section id="about">
+    <div class="about_dirPage">
+      
+      <div class="about_row">
+
+        <div class="about_col_1" data-aos="zoom-out"><img src="/images/about_img.png" alt="image"></div>
+
+        <div class="about_col_2" data-aos="fade-up">
+
+          <h1 class="sub-title">About Me</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A maxime, tempora quae magni corporis voluptate.
+            Culpa modi doloribus perferendis voluptas velit itaque similique voluptatibus, ad dolorum harum earum. Hic,
+            veritatis?</p>
+
+          <div class="tab_titles">
+            <p class="tab_links active_link" onclick="showSkills()" id="skill">Skills</p>
+            <p class="tab_links" onclick="showExp()" id="exp">Experience</p>
+            <p class="tab_links" onclick="showEdu()" id="edu">Education</p>
+          </div>
+
+          <div class="tab_contents active_tab" id="tab_contentSkill">
+            <ul>
+              <li><span>UI/UX</span><br>Designing Web Interfaces</li>
+              <li><span>Web Developer</span><br>Designs/Develop Websites</li>
+              <li><span>Tally Prime</span><br>Managing Accounts</li>
+            </ul>
+          </div>
+
+          <div class="tab_contents" id="tab_contentExp">
+            <ul>
+              <li><span>2024 - Current</span><br>Global Study Center</li>
+              <li><span>2018 - 2024</span><br>Shine Classes & Computer Institute</li>
+            </ul>
+          </div>
+
+          <div class="tab_contents" id="tab_contentEdu">
+            <ul>
+              <li><span>2011</span><br>12th CBSE Board Kushinagar</li>
+              <li><span>2012-2016</span><br>Bachelor in computer applications</li>
+              <li><span>2017-2018</span><br>Master in computer applications</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===================================Contact========================= -->
+
+  <section id="contact">
+    <div id="text_info_web">
+      <h1>Contact</h1>
+      <p>Global Study Center offers excellent contact facilities, including a dedicated support hotline, email
+        assistance, whatsapp and personalized consultation sessions by appointment, ensuring prompt and effective
+        communication for all inquiries and support needs.</p>
+    </div>
+
+    <div class="contact_page" data-aos="flip-up">
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="66a5fabc-697f-4054-990e-c85a0851bc6a">
+        <input type="text" name="Name" placeholder="Enter Your Name" id="name" onkeyup="nameValid()" autocomplete="off">
+        <p id="nameError"></p>
+
+        <input type="email" name="Email" placeholder="Enter Your Email" id="email" onkeyup="emailValid()"
+          autocomplete="off">
+        <p id="emailError"></p>
+
+        <input type="text" name="City" placeholder="Your City" id="city" onkeyup="cityValid()" autocomplete="off">
+        <p id="cityError"></p>
+
+        <input type="number" name="Mobile Number" placeholder="Mobile Number" id="phone" onkeyup="phoneValid()"
+          autocomplete="off">
+        <p id="phoneError"></p>
+
+        <label for="radio">Male</label>
+        <input type="radio" name="Gender" id="gender">
+        <label for="radio">Female</label>
+        <input type="radio" name="Gender" id="gender">
+        <label for="radio">Other</label>
+        <input type="radio" name="Gender" id="gender">
+        <p id="genderError"></p>
+
+        <textarea name="textArea" id="msg" name="Message" placeholder="Your Message" onkeyup="msgValid()"
+          autocomplete="off"></textarea>
+        <p id="msgError"></p>
+
+        <input type="submit" value="Submit Now" onclick="return contactFormValid()">
+      </form>
+    </div>
+  </section>
+
+  <!-- =============================Footer=============================== -->
+
+  <footer id="footer">
+    <div class="footer_container">
+
+      <div class="foot_abt">
+        <center><img src="/images/logo.jpg" alt="Logo"></center>
+        <p>
+          Global Study Center provides top-tier computer software and networking training. Our seasoned instructors guide students through hands-on learning, equipping them with essential skills for thriving in the tech industry.</p>
+      </div>
+
+      <div class="foot_links">
+        <h4>Useful Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#">Curriculum</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="smLinks">
+          <i class="fa-brands fa-youtube foot_sm"></i>
+          <i class="fa-brands fa-facebook foot_sm"></i>
+          <i class="fa-brands fa-instagram foot_sm"></i>
+         <i class="fa-brands fa-twitter foot_sm"></i>
+        </div>
+      </div>
+
+      <div class="foot_addCnt">
+        <h4>Address</h4>
+        <address>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus, sequi?</address>
+        <div class="add_link">
+          <i class="fa-solid fa-phone ftcnt_link"></i><a href="tel:9876543210">9876543210</a>
+        </div>
+        <div class="add_link">
+          <i class="fa-solid fa-envelope ftcnt_link"></i><a href="mailto:gccei.bhola@gmail.com">gccei.bhola@gmail.com</a>
+        </div>
+        
+      </div>
+
+    </div>
+  </footer>
+
+
+
+
+
+  <!-- ------------------------------------Javascripts------------------------------------- -->
+  <script src="/javascripts/script.js"></script>
+  <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- ----------------animate div on scroll-------------------------->
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      offset: 280,
+      duration: 800
+    });
+  </script>
+
+  <!-- ====================================================================================
+======================================The End============================================
+=========================================================================================
+ -->
+
+</body>
+
+</html>

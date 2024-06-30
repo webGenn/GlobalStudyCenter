@@ -1,0 +1,405 @@
+/*---------------------Removing Default Styles-------------------------*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto";
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/*-------------------------------Landing Page--------------------------*/
+
+.home_landing_page{
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.4),rgba(0,0,0,0.2)), url(../images/home_bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.curr_landing_page{
+    width: 100%;
+}
+nav{
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5),rgba(0,0,0,0.3));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+#Currnav{
+    background-color: black;
+}
+nav h2{
+    margin-left: 10px;
+    font-size: 29px;
+    color: white;
+}
+nav ul{
+    margin-right: 10px;
+}
+nav ul li{
+    display: inline-block;
+    position: relative;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 30px;
+}
+nav ul .active a{
+    background-color: #1AA260;
+    border-radius: 7px;
+}
+nav ul li a:hover{
+    background-color: deeppink;
+    border-radius: 5px;
+    transition: all 0.2s linear;
+}
+nav .navbar .close{
+    margin: 10px 0 0 10px;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    display: none;
+}
+nav .menu{
+    margin-right: 10px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+#userName{
+    color: green;
+}
+
+.home_landing_pg_content{
+    width: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.home_landing_pg_content h1{
+    text-align: center;
+    color: white;
+    font-size: 50px;
+}
+.home_landing_pg_content p{
+    text-align: center;
+    color: white;
+    font-size: 18px;
+}
+.home_landing_pg_content button{
+    width: 300px;
+    height: 40px;
+    color: white;
+    font-family: "Roboto";
+    border: 2px solid white;
+    background: none;
+    cursor: pointer;
+    margin-top: 12px;
+    border-radius: 5px;
+    transition: all 0.2s linear;
+    background-color: #EB5406;
+}
+.home_landing_pg_content button:hover{
+    background-color: #FFF8DC;
+    color: black;
+}
+
+/* =============================Courses Page============================= */
+
+#text_info_web{
+    width: 80%;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    text-align: center;
+    padding: 10px;
+}
+#text_info_web h1{
+    font-size: 40px;
+}
+#text_info_web p{
+    font-size: 16px;
+    color: #605f5f;
+}
+
+.course_colmn{
+    width: 80%;
+    margin: auto;
+    margin-bottom: 20px;
+    display: flex;
+    column-gap: 10px;
+    row-gap: 12px;
+    flex-wrap: wrap;
+}
+.course_colmn .card{
+    flex-basis: 32%;
+}
+
+/* ============================About============================ */
+
+#about{
+    margin-bottom: 20px;
+}
+.about_dirPage{
+    color: #ababab;
+    background-color: black;
+    padding: 10px;
+}
+.about_dirPage .about_row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about_dirPage .about_row .about_col_1{
+    flex-basis: 35%;
+    overflow: hidden;
+}
+.about_dirPage .about_row .about_col_1 img{
+    height: 350px;
+    width: 100%;
+    border-radius: 15px;
+}
+.about_dirPage .about_row .about_col_2{
+    flex-basis: 60%;
+}
+.sub-title{
+    font-size: 40px;
+    font-weight: 600;
+    color: white;
+}
+.tab_titles{
+    display: flex;
+}
+.tab_titles .tab_links{
+    margin-right: 20px;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: 500;
+    position: relative;
+}
+.active_link{
+    color: #f40c56;
+}
+.tab_contents ul{
+    position: relative;
+    left: -30px;
+}
+.tab_contents ul li{
+    list-style: none;
+    margin: 10px 0px;
+}
+.tab_contents ul li span{
+    color: yellow;
+}
+.tab_contents{
+    display: none;
+}
+.active_tab{
+    display: block;
+}
+
+/* ============================Contact========================== */
+
+#contact{
+    box-shadow: 2px 2px 10px 10px black;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.contact_page{
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.contact_page form input{
+    width: 100%;
+    height: 35px;
+    padding: 10px;
+    font-family: "Roboto";
+    margin-bottom: 10px;
+}
+.contact_page form input[type="radio"]{
+    width: 180px;
+    height: 20px;
+}
+.contact_page form textarea{
+    width: 100%;
+    height: 100px;
+    resize: vertical;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.contact_page form input[type="submit"]{
+    height: 40px;
+    background-color: #045F5F;
+    border: 0;
+    color: white;
+    cursor: pointer;
+    outline: none;
+}
+.contact_page form p{
+    font-size: 17px;
+    color: #605f5f;
+}
+
+/* ---curriculum page-- */
+
+#CurriculumRegister{
+    width: 90%;
+    margin: auto;
+    padding-top: 50px;
+    margin-bottom: 20px;
+}
+.currWebInfo p{
+    margin-top: 12px;
+}
+#checkAccount{
+    text-align: center;
+    margin-top: 10px;
+}
+/* ========================Footer Design============================= */
+
+#footer{
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #e8e8e8;
+}
+.footer_container{
+    background-color: white;
+    display: flex;
+    flex: wrap;
+    justify-content: space-between;
+}
+
+.footer_container .foot_abt{
+    flex-basis: 32%;
+    padding: 10px;
+}
+.footer_container .foot_abt img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+.footer_container .foot_abt p{
+    font-size: 17px;
+}
+
+.footer_container .foot_links{
+    padding: 10px;
+    flex-basis: 32%;
+}
+.footer_container .foot_links h4{
+    margin-top: 20px;
+    text-align: center;
+}
+.footer_container .foot_links ul{
+    text-align: center;
+}
+.footer_container .foot_links ul li{
+    list-style: none;
+    margin-top: 5px;
+}
+.footer_container .foot_links ul li a{
+    text-decoration: none;
+    color: black;
+}
+.footer_container .foot_links .smLinks{
+    text-align: center;
+}
+.footer_container .foot_links .foot_sm{
+    margin-right: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.footer_container .foot_addCnt{
+    flex-basis: 32%;
+}
+.footer_container .foot_addCnt h4{
+    margin-top: 20px;
+}
+.footer_container .foot_addCnt .add_link{
+    margin-bottom: 10px;
+}
+.footer_container .foot_addCnt a{
+    text-decoration: none;
+    color: black;
+}
+.footer_container .foot_addCnt .ftcnt_link{
+    margin-right: 10px;
+}
+
+
+/* ===========================Curriculum Page======================= */
+
+.curr_user_info{
+    padding: 10px;
+}
+.currNotice .currNoticePage{
+    color: white;
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #151B54;
+    border-radius: 10px;
+}
+#StudyLink{
+    color: yellow;
+    text-decoration: none;
+}
+#StudyLink:hover{
+    text-decoration: underline;
+}
+.currMaterialPage{
+    color: white;
+    width: 80%;
+    overflow-x: hidden;
+    margin: auto;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #033E3E;
+}
+.currMaterialPage a{
+    display: inline-block;
+    margin-bottom: 10px;
+}
+/* --------------------------------Admin Page ------------------------------ */
+
+.admin_container{
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+}
+.admin_container h2{
+    margin-top: 20px;
+}
+.admin_container input{
+    width: 100%;
+    padding: 10px;
+    border: 2px solid black;
+    margin-top: 20px;
+}
+.admin_container input[type="submit"]{
+    border: 0;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}
