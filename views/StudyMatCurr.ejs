@@ -51,7 +51,7 @@
     <% allmaterials.forEach(function(materials){ %>
       <div class="currMaterialPage">
         <h3><%= materials.Shead %></h3>
-        <a href="<%= materials.SmatLink %>" id="StudyLink"><%= materials.SmatLink %></a>
+        <a href="<%= materials.SmatLink %>" target="blank" id="StudyLink"><%= materials.SmatLink %></a>
         <p><%= materials.Sbody %></p>
         <hr>
         <span><%= materials.createdAt.toDateString() %></span>
