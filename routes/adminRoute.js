@@ -1,7 +1,5 @@
 const express = require("express");
 const router = express.Router();
-const bcrypt = require("bcrypt");
-const jwt = require("jsonwebtoken");
 const cookie_parser = require("cookie-parser");
 
 router.use(cookie_parser())
