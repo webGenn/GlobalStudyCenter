@@ -14,7 +14,7 @@ router.get("/", (req, res) => {
     res.render("index");
 })
 
-router.get("/register", (req, res) => {
+router.get("/register", isLoggedIn ,(req, res) => {
     res.render("register");
 })
 
@@ -61,7 +61,7 @@ router.post("/register", async (req, res) => {
 
 router.post("/login", async (req, res) => {
     let user = await userModel.findOne({ email: req.body.email, phone: req.body.phone });
-    if (!user) return res.redirect("/register");
+    if (!user) return res.redirect("/");
 
     bcrypt.compare(req.body.password, user.password, function (err, result) {
         if (result) {
