@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Not Found</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body, html {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to bottom right, #6a11cb, #2575fc);
+            color: #fff;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .container {
+            position: relative;
+            padding: 40px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .error-code {
+            font-size: 10em;
+            font-weight: bold;
+            letter-spacing: 5px;
+            margin-bottom: 20px;
+        }
+
+        .message {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .description {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .home-button {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #3498db;
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .home-button:hover {
+            background-color: #2980b9;
+            transform: scale(1.05);
+        }
+
+        .reflection {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            transform: scaleY(-1);
+            z-index: 0;
+            filter: blur(1px);
+        }
+
+        .container:after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            height: 100%;
+            background: inherit;
+            transform: scaleY(-1);
+            filter: blur(1px);
+            opacity: 0.5;
+        }
+
+        @keyframes ripple {
+            0% {
+                transform: scaleY(-1) translateY(0);
+            }
+            50% {
+                transform: scaleY(-1) translateY(5px);
+            }
+            100% {
+                transform: scaleY(-1) translateY(0);
+            }
+        }
+
+        .reflection {
+            animation: ripple 2s infinite ease-in-out;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .error-code {
+                font-size: 6em;
+            }
+
+            .message {
+                font-size: 1.5em;
+            }
+
+            .description {
+                font-size: 1em;
+            }
+
+            .home-button {
+                padding: 10px 20px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="error-code">404</div>
+        <div class="message">Page Not Found</div>
+        <p class="description">Sorry, but the page you were looking for doesn't exist.</p>
+        <a href="/" class="home-button">Go to Homepage</a>
+        <div class="reflection"></div>
+    </div>
+</body>
+</html>

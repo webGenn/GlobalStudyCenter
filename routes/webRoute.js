@@ -101,5 +101,8 @@ function isLoggedIn (req,res,next){
     next()
 }
 
+router.get("*", (req,res)=>{
+    res.render("errorPage")
+})
 
 module.exports = router
