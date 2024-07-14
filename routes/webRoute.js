@@ -14,7 +14,7 @@ router.get("/", (req, res) => {
     res.render("index");
 })
 
-router.get("/register", isLoggedIn ,(req, res) => {
+router.get("/admin/gloBalStudyCentEr/new/register", isLoggedIn ,(req, res) => {
     res.render("register");
 })
 
