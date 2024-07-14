@@ -1,3 +1,12 @@
+// preloading effect
+
+let preloader = document.getElementById("preloader");
+function preloading(){
+    preloader.style.display = "none";
+}
+
+
+
 // Navigation
 
 let navbar = document.getElementById("navbar");
