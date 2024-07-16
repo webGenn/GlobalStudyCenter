@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Study Center - Test Page</title>
+    <link rel="stylesheet" href="/stylesheets/test.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Skill Test</h1>
+        <div id="timer">
+            Time: 5:00
+            <div class="messages">
+                <h3>Tips before you start :-</h3>
+                <ol>
+                    <li>Questions will appear one by one.</li>
+                    <li>You can select only one option at once.</li>
+                    <li>Once you select any option, you can't change it.</li>
+                    <li>Once the given time ends, your test will get over.</li>
+                    <li>As soon as the test gets over, the result will get print on your screen.</li>
+                    <li>There will be total <strong>10</strong> questions. Which means, 1 min for 2 Questions.</li>
+                </ol>
+            </div>
+            <button id="runTest" onclick="RunTest()">Start Now</button>
+        </div>
+        <div id="question-container">
+            <div><h2 id="question"></h2></div>
+            <div id="answer-buttons" class="btn-grid"></div>
+        </div>
+        <button id="next-btn" class="hide btn_effect">Next</button>
+        <div id="result" class="hide">
+            <h2>Your Score: <span id="score"></span></h2>
+        </div>
+    </div>
+    <script src="/javascripts/test.js"></script>
+</body>
+</html>

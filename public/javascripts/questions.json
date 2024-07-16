@@ -1,0 +1,102 @@
+[
+    {
+        "question": "What does HTML stand for?", 
+        "answers": [
+            { "text": "HyperText Markup Language", "correct": true }, 
+            { "text": "Hyper text Markque Language", "correct": false },
+            { "text": "Hypo text MarkUp Language", "correct": false },
+            { "text": "Hyperlinking Text Management Language", "correct": false }
+        ]
+    },
+
+    {
+        "question": "Which HTML tag is used to define an internal style sheet?",
+        "answers": [
+            { "text": "<css>", "correct": false },
+            { "text": "<style>", "correct": true },
+            { "text": "<script>", "correct": false },
+            { "text": "None of the above", "correct": false }
+        ]
+    },
+
+    {
+        "question": "What is the Full form of DOM?",
+        "answers": [
+            { "text": "Docker Object Machine", "correct": false },
+            { "text": "Database Object Model", "correct": false },
+            { "text": "Document object Model", "correct": true },
+            { "text": "None of the above", "correct": false }
+        ]
+    },
+
+    {
+        "question": "What is the Full form of SEO?",
+        "answers": [
+            { "text": "Single Engineerig Object", "correct": false },
+            { "text": "Search Engine Object", "correct": false },
+            { "text": "Search Engine Optical", "correct": false },
+            { "text": "Search Engine Optimization", "correct": true }
+        ]
+    },
+
+    {
+        "question": "What will be output of `true + 11` in javascript?",
+        "answers": [
+            { "text": "111", "correct": false },
+            { "text": "null", "correct": false },
+            { "text": "12", "correct": true },
+            { "text": "undefined", "correct": false }
+        ]
+    },
+
+    {
+        "question": "What will be output of `false - 0 + 27 + true`",
+        "answers": [
+            { "text": "null", "correct": false },
+            { "text": "28", "correct": true },
+            { "text": "-27", "correct": false },
+            { "text": "undefined", "correct": false }
+        ]
+    },
+
+    {
+        "question": "In css, 1 rem = ?px",
+        "answers": [
+            { "text": "10px", "correct": false },
+            { "text": "28px", "correct": false },
+            { "text": "16px", "correct": true },
+            { "text": "22px", "correct": false }
+        ]
+    },
+
+    {
+        "question": "In css, what is the default font-size of h1 tag?",
+        "answers": [
+            { "text": "28px", "correct": false },
+            { "text": "36px", "correct": false },
+            { "text": "55px", "correct": false },
+            { "text": "32px", "correct": true }
+        ]
+    },
+
+    {
+        "question": "Which tag will be use to write the chemical formula of water?",
+        "answers": [
+            { "text": "Subscript tag", "correct": true },
+            { "text": "Superscript tag", "correct": false },
+            { "text": "Flascript Tag", "correct": false },
+            { "text": "None of the above", "correct": false }
+        ]
+    },
+
+    {
+        "question": "What is the full form of ES7 in javascript?",
+        "answers": [
+            { "text": "EncryptScript 7", "correct": false },
+            { "text": "Enrypted Search 17", "correct": false },
+            { "text": "Engine System 2017", "correct": false },
+            { "text": "EcmaScript 2017", "correct": true }
+        ]
+    }
+
+]

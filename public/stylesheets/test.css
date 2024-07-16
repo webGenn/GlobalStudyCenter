@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+.container {
+    width: 400px;
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    margin: 0;
+}
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+#question{
+    font-size: 22px;
+    color: #F70D1A;
+}
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+button {
+    cursor: pointer;
+    border: 1px solid #333;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #033E3E;
+    color: white;
+    transition: background-color 0.3s;
+}
+button:hover {
+    background-color: #FE632A;
+    border: 1px solid white;
+}
+button:focus {
+    outline: none;
+}
+.hide {
+    display: none;
+}
+.btn_effect{
+    background-color: green;
+    border: 0;
+}
+.btn_effect:hover{
+    background-color: #810541;
+}
+#timer {
+    font-size: 18px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+#start-screen, #result-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#start-screen button, #result-screen button {
+    margin-top: 20px;
+}
+.messages ol li{
+    text-align: left;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-bottom: 10px;
+}

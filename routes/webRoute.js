@@ -39,6 +39,10 @@ router.get("/logout", (req,res)=>{
     res.redirect("/login")
 })
 
+router.get("/testOnline", isLoggedIn ,(req,res)=>{
+    res.render("test");
+})
+
 // dynamically login page
 
 router.post("/register", async (req, res) => {
