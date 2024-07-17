@@ -22,7 +22,7 @@ router.get("/admin/gloBalStudyCentEr/new/register", isLoggedIn ,(req, res) => {
 
 // user login page
 router.get("/login", (req, res) => {
-    res.render("login");
+    res.render("login", {msg : req.flash("msg"), msg2 : req.flash("msg2"), msg3 : req.flash("msg3")});
 })
 
 // notice page
@@ -53,7 +53,7 @@ router.get("/testOnline", isLoggedIn ,(req,res)=>{
 // userProfile Page
 router.get("/profile", isLoggedIn ,async (req,res)=>{
     let user = await userModel.findOne({email : req.user.email})
-    res.render("profile", {user})
+    res.render("profile", {user, msg4 : req.flash("msg4")})
 })
 
 // deleting user
@@ -72,6 +72,7 @@ router.get("/edit/:userid", async (req,res)=>{
 router.post("/update/:userid", async (req,res)=>{
     let{name, address} = req.body
     let user = await userModel.findOneAndUpdate({_id : req.params.userid}, {name, address}, {new : true})
+    req.flash("msg4", "Hurray!! Profile Updated Successfully!")
     res.redirect("/profile")
 })
 
@@ -90,14 +91,18 @@ router.post("/register", async (req, res) => {
             })
             let token = jwt.sign({ email }, process.env.SECRET_KEY);
             res.cookie("token", token);
-            res.render("login")
+            req.flash("msg", "User Created Successfully")
+            res.redirect("/login")
         })
     })
 })
 
 router.post("/login", async (req, res) => {
     let user = await userModel.findOne({ email: req.body.email, phone: req.body.phone });
-    if (!user) return res.redirect("/");
+    if (!user) {
+        req.flash("msg3", "Oops! It looks like you are not registered")
+        return res.redirect("/login");
+    }
 
     bcrypt.compare(req.body.password, user.password, function (err, result) {
         if (result) {
@@ -105,7 +110,10 @@ router.post("/login", async (req, res) => {
             res.cookie("token", token);
             res.redirect("/curriculum")
         }
-        else { res.redirect("/login") }
+        else { 
+            req.flash("msg2", "Email or Password is Incorrect")
+            res.redirect("/login") 
+        }
     })
 
 })

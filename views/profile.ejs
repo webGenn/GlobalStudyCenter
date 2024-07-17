@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Students Profile - Global Study Center</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <style>
-    * {
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -20,7 +22,7 @@ body {
     align-items: center;
     min-height: 100vh;
 }
-.container {
+.box {
     width: 90%;
     max-width: 800px;
     background-color: #fff;
@@ -34,12 +36,6 @@ body {
     padding: 20px;
     background-color: #007bff;
     color: #fff;
-}
-.profile-image img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-right: 20px;
 }
 .profile-info h1 {
     font-size: 24px;
@@ -98,39 +94,46 @@ body {
     .profile-image {
         margin-bottom: 10px;
     }
-
     .profile-image img {
         width: 80px;
         height: 80px;
     }
 }
-
-</style>
+    </style>
 </head>
 <body>
-    <div class="container">
-        <div class="profile-header">
-            <div class="profile-info">
-                <h1><%= user.name %></h1>
-                <p>Course :  <strong><%= user.course %></strong></p>
-            </div>
+
+<div class="box">
+    <% if(msg4.length > 0){ %>
+        <div class="alert alert-success alert-dismissible fade show mb-0" role="alert">
+            <strong><%= msg4 %></strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
-        <div class="profile-details">
-            <div class="profile-section">
-                <h2>Email</h2>
-                <p>Your Email Is: <strong><%= user.email %></strong></p>
-            </div>
-            <div class="profile-section">
-                <h2>Phone</h2>
-                <p>Your Phone Number is: <strong><%= user.phone %></strong></p>
-            </div>
-            <div class="profile-section">
-                <h2>Address</h2>
-                <p>Your Address is: <strong><%= user.address %></strong></p>
-            </div>
+    <% } %>
+    <div class="profile-header">
+        <div class="profile-info">
+            <h1><%= user.name %></h1>
+            <p>Course :  <strong><%= user.course %></strong></p>
+        </div>
+    </div>
+    <div class="profile-details">
+        <div class="profile-section">
+            <h2>Email</h2>
+            <p>Your Email Is: <strong><%= user.email %></strong></p>
+        </div>
+        <div class="profile-section">
+            <h2>Phone</h2>
+            <p>Your Phone Number is: <strong><%= user.phone %></strong></p>
+        </div>
+        <div class="profile-section">
+            <h2>Address</h2>
+            <p>Your Address is: <strong><%= user.address %></strong></p>
+        </div>
             <a href="/edit/<%= user._id %>"><button id="profileEdit">Edit Profile</button></a>
             <a href="/delete/<%= user._id %>" onclick="return confirm(`Are you sure you want to delete your account? Once You Delete, you cannot login again.`)"><button id="profileDelete">Delete Account</button></a>
         </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
