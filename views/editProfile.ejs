@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Students Login - Global Study Center</title>
+    <title>Edit Profile - Global Study Center</title>
     <!-- ---------------------Linking Css--------------------- -->
     <link rel="stylesheet" href="/stylesheets/style.css">
     <link rel="stylesheet" href="/stylesheets/responsive.css">
@@ -21,24 +21,31 @@
 
 <section id="CurriculumRegister">
     <div id="text_info_web" class="currWebInfo">
-      <h1>Login Now</h1>
-      <p>Enter Your Email, Password and Phone Number that you have recieved.</p>
+      <h1>Edit Your Profile</h1>
+      <p>Dear Students, Some informations cannot be edit.
+        <strong>It can only be done through office.</strong>
+      </p>
     </div>
 
     <div class="contact_page">
-      <form action="/login" method="POST" class="currInput">
+      <form action="/update/<%= user._id %>" method="POST" class="currInput">
 
-        <input type="email" name="email" placeholder="Enter Email" autocomplete="off">
+        <input type="text" name="name" placeholder="Your Name" autocomplete="off" value="<%= user.name %>" required>
 
-        <input type="password" name="password" placeholder="Enter Password" autocomplete="off">
+        <input type="email" name="email" placeholder="Email" autocomplete="off" readonly value="<%= user.email %>">
+
+        <input type="text" name="course" placeholder="Course" autocomplete="off" readonly value="<%= user.course %>">
+
+        <input type="text" name="address" placeholder="Address" autocomplete="off" value="<%= user.address%>" required>
         
-        <input type="number" name="phone" placeholder="Mobile Number" autocomplete="off">
+        <input type="number" name="phone" placeholder="Mobile Number" autocomplete="off" readonly value="<%= user.phone %>">
 
-        <input type="submit" value="Login Now">
-        <p id="checkAccount">Dear students, if you don't have any account, please contact/visit our office -> </p>
+        <input type="submit" value="Update Now">
       </form>
     </div>
 </section>
+
+
 
     <script src="/javascripts/script.js"></script>
 </body>
