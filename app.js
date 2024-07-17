@@ -14,4 +14,8 @@ app.set("view engine", "ejs");
 app.use("/", require("./routes/webRoute"));
 app.use("/", require("./routes/adminRoute"));
 
+app.get("*", (req,res)=>{
+    res.render("errorPage")
+})
+
 app.listen(port)
